@@ -2,7 +2,8 @@ exports = (typeof window === 'undefined') ? global : window;
 
 exports.objectsAnswers =  {
   alterContext : function(fn, obj) {
-    // Optional Challenge
+  	    obj.fn = fn;
+  	    return obj.fn();
   },
 
   alterObjects : function(constructor, greeting) {
